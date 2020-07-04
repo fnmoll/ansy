@@ -1,0 +1,11 @@
+---
+plugin: aws_ec2
+regions:
+  - us-east-1
+filters:
+  tag:env_short: dev
+keyed_groups:
+  - key: tags.env_short
+    separator: ''
+  - key: tags.service
+    separator: ''

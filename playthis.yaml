@@ -1,0 +1,7 @@
+---
+- name: variable precedence test
+  hosts: all
+  pre_tasks:
+   - include: tasks/load_vars.yaml
+  tasks:
+    - debug: var=server_memory_size
